@@ -67,6 +67,7 @@ namespace Gifter.Repositories
                 ? query.OrderByDescending(p => p.DateCreated).ToList()
                 : query.OrderBy(p => p.DateCreated).ToList();
         }
+        // https://localhost:5001/api/post/hottest?since=2020-06-29
         public List<Post> Hot(DateTime dateTime)
         {
             return _context.Post.Include(p => p.UserProfile)
