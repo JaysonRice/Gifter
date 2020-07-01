@@ -17,17 +17,21 @@ namespace Gifter.Repositories
 
         public List<Post> GetAll()
         {
-            return _context.Post.Include(p => p.UserProfile).ToList();
+            return _context.Post.Include(p => p.UserProfile)
+                .Include(c => c.Comments)
+                .ToList();
         }
 
         public Post GetById(int id)
         {
             return _context.Post.Include(p => p.UserProfile)
+                .Include(c => c.Comments)
                 .FirstOrDefault(p => p.Id == id);
         }
         public List<Post> GetByUserProfileId(int id)
         {
             return _context.Post.Include(p => p.UserProfile)
+                            .Include(c => c.Comments)
                             .Where(p => p.UserProfileId == id)
                             .OrderBy(p => p.Title)
                             .ToList();
@@ -50,11 +54,13 @@ namespace Gifter.Repositories
             _context.Post.Remove(post);
             _context.SaveChanges();
         }
+        // https://localhost:5001/api/post/search?q=p&sortDesc=false
         public List<Post> Search(string criterion, bool sortDescending)
         {
             var query = _context.Post
                                 .Include(p => p.UserProfile)
-                                .Where(p => p.Title.Contains(criterion));
+                                .Include(c => c.Comments)
+                                .Where(p => p.Title.Contains(criterion) || p.Caption.Contains(criterion));
 
             return sortDescending
                 ? query.OrderByDescending(p => p.DateCreated).ToList()
