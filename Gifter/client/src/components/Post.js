@@ -11,6 +11,8 @@ const Post = ({ post }) => {
                     <strong>{post.title}</strong>
                 </p>
                 <p>{post.caption}</p>
+                <strong>COMMENTS</strong>
+                {post.comments.map(comment => <p>{comment.message}</p>)}
             </CardBody>
         </Card>
     );
