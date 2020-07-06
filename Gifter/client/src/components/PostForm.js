@@ -1,10 +1,12 @@
 import React, { useContext, useRef } from "react"
 import { PostContext } from "../providers/PostProvider"
 import { Form } from "reactstrap"
+import { useHistory } from "react-router-dom"
 
 
 export default props => {
     const { addPost } = useContext(PostContext)
+    const history = useHistory();
 
     const title = useRef("title")
     const image = useRef("image")
@@ -21,7 +23,10 @@ export default props => {
             caption: caption.current.value
         }
         console.log(newPostObject)
-        addPost(newPostObject).then(() => form.current.reset())
+        addPost(newPostObject).then((p) => {
+            // Navigate the user back to the home route
+            history.push("/");
+        });
     }
 
     return (
@@ -79,7 +84,7 @@ export default props => {
                         required
                         autoFocus
                         className="form-control"
-                        placeholder="User id"
+                        placeholder="Caption"
                     />
                 </div>
             </fieldset>
