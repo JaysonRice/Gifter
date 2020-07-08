@@ -23,16 +23,6 @@ namespace Gifter.Controllers
             return Ok(_userProfileRepository.GetAll());
         }
 
-        [HttpGet("{id}")]
-        public IActionResult Get(int id)
-        {
-            var userProfile = _userProfileRepository.GetById(id);
-            if (userProfile == null)
-            {
-                return NotFound();
-            }
-            return Ok(userProfile);
-        }
 
         [HttpPost]
         public IActionResult Post(UserProfile userProfile)
