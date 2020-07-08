@@ -140,8 +140,6 @@ C:\Users\jrice\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\runtimes\win\lib\
 C:\Users\jrice\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.csprojAssemblyReference.cache
 C:\Users\jrice\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.AssemblyInfoInputs.cache
 C:\Users\jrice\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.AssemblyInfo.cs
-C:\Users\jrice\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.csproj.CoreCompileInputs.cache
-C:\Users\jrice\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\jrice\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.RazorTargetAssemblyInfo.cache
 C:\Users\jrice\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.csproj.CopyComplete
 C:\Users\jrice\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\staticwebassets\Gifter.StaticWebAssets.Manifest.cache
@@ -152,3 +150,12 @@ C:\Users\jrice\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.genruntime
 C:\Users\jrice\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\client\package-lock.json
 C:\Users\jrice\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\client\package.json
 C:\Users\jrice\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\client\public\manifest.json
+C:\Users\jrice\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\jrice\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\jrice\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\jrice\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\jrice\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\jrice\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\jrice\workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\jrice\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.csproj.CoreCompileInputs.cache
+C:\Users\jrice\workspace\Gifter\Gifter\obj\Debug\netcoreapp3.1\Gifter.MvcApplicationPartsAssemblyInfo.cache
