@@ -30,7 +30,7 @@ CREATE TABLE [UserProfile] (
   [Bio] nvarchar(255),
   [DateCreated] datetime NOT NULL
 
-  CONSTRAINT UQ_FirebaseUserId UNIQUE(FirebaseUserId)
+CONSTRAINT UQ_FirebaseUserId UNIQUE(FirebaseUserId)
 )
 GO
 
@@ -63,7 +63,7 @@ SET IDENTITY_INSERT [UserProfile] ON
 INSERT INTO [UserProfile]
   ([Id], [FirebaseUserId], [Name], [Email], [ImageUrl], [Bio], [DateCreated])
 VALUES 
-  (1, 'sfGs04Js7Ogfx6c5REl5aaHDCO83', 'Jayson Rice', 'jayson@email.com', null, null, '06-21-2020');
+  (1, 'zLH7hx4I9FS5g1pKdXhCE6f7r2M2', 'Jayson Rice', 'jayson@email.com', null, null, '06-21-2020');
 INSERT INTO [UserProfile]
   ([Id], [FirebaseUserId], [Name], [Email], [ImageUrl], [Bio], [DateCreated])
 VALUES 

@@ -4,7 +4,7 @@ import { UserProfileContext } from "./UserProfileProvider";
 export const PostContext = React.createContext();
 
 export const PostProvider = (props) => {
-    const apiUrl = "/api/quote";
+    const apiUrl = "/api/post";
     const { getToken } = useContext(UserProfileContext);
 
     const [posts, setPosts] = useState([]);
@@ -37,19 +37,27 @@ export const PostProvider = (props) => {
             }));
 
     const getPost = (id) => {
-        return fetch(`/api/post/${id}`)
-            .then((res) => res.json());
-    };
+        getToken().then((token) =>
+            fetch(`/api/post/${id}`, {
+                method: "GET",
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            }))
+            .then((res) => res.json())
+    }
 
     const searchPosts = (searchTerm) => {
-        if (!searchTerm) {
-            getAllPosts()
-            return
-        }
-        return fetch(`api/post/search?q=${searchTerm}&sortDesc=true`)
-            .then((res) => res.json())
-            .then(setPosts)
-    }
+        getToken().then((token) =>
+            fetch(`api/post/search?q=${searchTerm}`, {
+                method: "GET",
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
+                .then((res) => res.json())
+                .then(setPosts));
+    };
 
     return (
         <PostContext.Provider value={{ posts, getAllPosts, addPost, searchPosts, getPost }}>
