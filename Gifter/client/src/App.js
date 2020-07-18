@@ -6,6 +6,7 @@ import { PostProvider } from "./providers/PostProvider";
 import { UserProfileProvider } from "./providers/UserProfileProvider";
 import Header from "./components/Header";
 
+
 function App() {
   return (
     <div className="App">
